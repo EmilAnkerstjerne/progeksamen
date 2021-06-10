@@ -1,0 +1,19 @@
+.sognnavn {
+    font-weight: bold;
+}
+
+.sogn-element{
+    margin: 5px;
+}
+
+#selected-sogn-div{
+    width: 33%;
+}
+
+#sogn-list-div{
+    width: 33%;
+}
+
+#opret-sogn-div{
+    width: 33%;
+}
