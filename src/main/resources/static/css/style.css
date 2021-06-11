@@ -8,12 +8,15 @@
 
 #selected-sogn-div{
     width: 33%;
+    display: inline-block;
 }
 
 #sogn-list-div{
     width: 33%;
+    display: inline-block;
 }
 
 #opret-sogn-div{
     width: 33%;
+    display: inline-block;
 }

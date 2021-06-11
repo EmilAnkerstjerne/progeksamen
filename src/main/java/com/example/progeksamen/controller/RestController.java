@@ -46,13 +46,11 @@ public class RestController {
         return new ResponseEntity<>(newSogn, HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/updateSogn", consumes = "application/json")
-    public ResponseEntity<Sogn> updateSogn(@RequestBody Sogn sogn){
+    @PutMapping(value = "/updateSogn/{kommunekode}", consumes = "application/json")
+    public ResponseEntity<Sogn> updateSogn(@RequestBody Sogn sogn, @PathVariable int kommunekode){
         Sogn newSogn = sogn;
-        newSogn.setKommune(sognRepository.getById(sogn.getId()).getKommune());
+        newSogn.setKommune(kommuneRepository.findKommuneByKommunekode(kommunekode));
         sognRepository.save(newSogn);
-
-
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 

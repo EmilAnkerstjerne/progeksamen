@@ -26,14 +26,30 @@ public class Sogn {
     private String navn;
     private int smittetryk;
     private Date nedlukningStart;
+    private boolean nedlukket;
 
     public Sogn(){}
+
+    public Sogn(int sogneKode, String navn, int smittetryk/*, Date nedlukningStart*/) {
+        this.sogneKode = sogneKode;
+        this.navn = navn;
+        this.smittetryk = smittetryk;
+        //this.nedlukningStart = nedlukningStart;
+    }
 
     public Sogn(int sogneKode, String navn, int smittetryk, Date nedlukningStart) {
         this.sogneKode = sogneKode;
         this.navn = navn;
         this.smittetryk = smittetryk;
         this.nedlukningStart = nedlukningStart;
+    }
+
+    public boolean isNedlukket() {
+        return nedlukket;
+    }
+
+    public void setNedlukket(boolean nedlukket) {
+        this.nedlukket = nedlukket;
     }
 
     public Integer getId() {

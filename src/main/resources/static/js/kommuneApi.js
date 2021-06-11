@@ -8,7 +8,7 @@ let getKommunerAPIRequest = {
 
 let body;
 
-let postRequest = {
+let postKommuneRequest = {
     method: "POST",
     headers: {
         "content-type": "application/json"
@@ -31,8 +31,8 @@ function fetchAllkommuner(){
             kommuneJson.navn = obj.navn;
             kommuneJson.kommunekode = obj.kode;
             body = JSON.stringify(kommuneJson);
-            postRequest.body = body;
-            fetch(postKommuneUrl, postRequest)
+            postKommuneRequest.body = body;
+            fetch(postKommuneUrl, postKommuneRequest)
                 .catch((error) => console.log(error));
         }))
         .catch((error) => console.log(error));
