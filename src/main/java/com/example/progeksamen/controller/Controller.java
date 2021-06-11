@@ -22,4 +22,9 @@ public class Controller {
     public String index(){
         return "index";
     }
+
+    @GetMapping("/kommuner")
+    public String kommuner(){
+        return "kommuner";
+    }
 }

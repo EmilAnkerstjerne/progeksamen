@@ -24,7 +24,10 @@ let kommuneJson = {
 let getKommunerAPIUrl = "https://api.dataforsyningen.dk/kommuner";
 let postKommuneUrl = "http://localhost:8080/newKommune";
 
+
+
 function fetchAllkommuner(){
+
     fetch(getKommunerAPIUrl, getKommunerAPIRequest)
         .then(response => response.json())
         .then(data => data.forEach(obj => {
@@ -36,5 +39,6 @@ function fetchAllkommuner(){
                 .catch((error) => console.log(error));
         }))
         .catch((error) => console.log(error));
+
+
 }
-//fetchAllkommuner();

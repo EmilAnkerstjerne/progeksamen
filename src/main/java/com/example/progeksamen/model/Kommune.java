@@ -19,12 +19,25 @@ public class Kommune {
 
     private String navn;
     private int kommunekode;
+    private int smittetryk;
 
     public Kommune(){}
 
     public Kommune(String navn, int kommunekode) {
         this.navn = navn;
         this.kommunekode = kommunekode;
+    }
+
+    public void addSmittetryk(int smittetryk){
+        this.smittetryk += smittetryk;
+    }
+
+    public int getSmittetryk() {
+        return smittetryk;
+    }
+
+    public void setSmittetryk(int smittetryk) {
+        this.smittetryk = smittetryk;
     }
 
     public Integer getId() {

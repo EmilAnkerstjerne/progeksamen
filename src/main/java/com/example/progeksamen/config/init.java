@@ -21,10 +21,6 @@ public class init implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Kommune kommune = new Kommune("holbek", 9999);
-        kommuneRepository.save(kommune);
-
-
     }
 
 }

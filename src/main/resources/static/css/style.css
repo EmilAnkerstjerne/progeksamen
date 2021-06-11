@@ -4,6 +4,13 @@
 
 .sogn-element{
     margin: 5px;
+    width: 90%;
+    height: 200px;
+}
+
+.kommunedetails{
+    border: 2px solid black;
+    margin: 5px;
 }
 
 #selected-sogn-div{
@@ -19,4 +26,5 @@
 #opret-sogn-div{
     width: 33%;
     display: inline-block;
+
 }

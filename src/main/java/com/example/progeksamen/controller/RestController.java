@@ -43,6 +43,11 @@ public class RestController {
         Sogn newSogn = sogn;
         newSogn.setKommune(kommuneRepository.findKommuneByKommunekode(kommunekode));
         sognRepository.save(newSogn);
+
+        Kommune kommune = kommuneRepository.findKommuneByKommunekode(kommunekode);
+        kommune.addSmittetryk(sogn.getSmittetryk());
+        kommuneRepository.save(kommune);
+
         return new ResponseEntity<>(newSogn, HttpStatus.CREATED);
     }
 

@@ -1,5 +1,3 @@
-console.log("Herrow");
-
 let getSogneRequest = {
     method: "GET",
     headers: {
@@ -37,10 +35,12 @@ let sognJson = {
 
 let getSogneUrl = "http://localhost:8080/allSogne";
 let putSognUrl = "http://localhost:8080/updateSogn/";
-let deleteSognUrl = "http://localhost:8080/deleteSogn/"
+let deleteSognUrl = "http://localhost:8080/deleteSogn/";
 
+function seKommuner(){
+    window.location.href = "http://localhost:8080/kommuner"
+}
 
-let postSognUrl;
 
 async function fetchSogn(){
     await fetch(getSogneUrl, getSogneRequest)
@@ -76,28 +76,52 @@ function buildHTML(data){
             }
             let navnInput = document.createElement("input");
             navnInput.value = obj.navn;
-            navnInput.
+            navnInput.id = "navninput";
+            let navnInputLabel = document.createElement("label");
+            navnInputLabel.for = "navninput";
+            navnInputLabel.innerHTML = "Navn: ";
+            selectedSogn.appendChild(navnInputLabel);
             selectedSogn.appendChild(navnInput);
             selectedSogn.appendChild(document.createElement("br"));
 
             let kodeInput = document.createElement("input");
             kodeInput.value = obj.sogneKode;
+            kodeInput.id = "kodeinput";
+            let kodeInputLabel = document.createElement("label");
+            kodeInputLabel.for = "kodeinput";
+            kodeInputLabel.innerHTML = "Sognkode: ";
+            selectedSogn.appendChild(kodeInputLabel);
             selectedSogn.appendChild(kodeInput);
             selectedSogn.appendChild(document.createElement("br"));
 
             let kommunekodeInput = document.createElement("input");
             kommunekodeInput.value = obj.kommune.kommunekode;
+            kommunekodeInput.id = "kommunekodeinput";
+            let kommunekodeInputLabel = document.createElement("label");
+            kommunekodeInputLabel.for = "kommunekodeinput";
+            kommunekodeInputLabel.innerHTML = "Kommunekode: ";
+            selectedSogn.appendChild(kommunekodeInputLabel);
             selectedSogn.appendChild(kommunekodeInput);
             selectedSogn.appendChild(document.createElement("br"));
 
             let smittetrykInput = document.createElement("input");
             smittetrykInput.value = obj.smittetryk;
+            smittetrykInput.id = "smittetrykinput";
+            let smittetrykInputLabel = document.createElement("label");
+            smittetrykInputLabel.for = "smittetrykinput";
+            smittetrykInputLabel.innerHTML = "Smittetryk: ";
+            selectedSogn.appendChild(smittetrykInputLabel);
             selectedSogn.appendChild(smittetrykInput);
             selectedSogn.appendChild(document.createElement("br"));
 
             let nedlukningInput = document.createElement("input");
             nedlukningInput.type = "date";
             nedlukningInput.value = nedlukning;
+            nedlukningInput.id = "nedlukninginput";
+            let nedlukningInputLabel = document.createElement("label");
+            nedlukningInputLabel.for = "nedlukninginput";
+            nedlukningInputLabel.innerHTML = "Nedlukningsdato: ";
+            selectedSogn.appendChild(nedlukningInputLabel);
             selectedSogn.appendChild(nedlukningInput);
             selectedSogn.appendChild(document.createElement("br"));
 

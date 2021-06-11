@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="/js/sogn.js"></script>
+    <title>Smitte i sogne</title>
+    <script src="/js/createSogn.js"></script>
     <script src="/js/kommuneApi.js"></script>
+    <script src="/js/viewAndUpdateSogn.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <button onclick="fetchAllkommuner()">Fetch kommuner</button>
+<button onclick="seKommuner()">Se kommuner</button>
 <div id="master-div">
     <div id="sogn-list-div">
 
@@ -18,6 +20,25 @@
 
     </div>
     <div id="opret-sogn-div">
+        <label for="sogn-navn">Navn: </label>
+        <input id="sogn-navn">
+        <br>
+
+        <label for="sogn-kode">Sognkode: </label>
+        <input id="sogn-kode">
+        <br>
+
+        <label for="kommune-kode">Kommunekode: </label>
+        <input id="kommune-kode">
+        <br>
+
+        <label for="smittetryk">Smittetryk: </label>
+        <input id="smittetryk">
+        <br>
+
+        <button onclick="postSogn()">Opret</button>
+
+
 
     </div>
 
